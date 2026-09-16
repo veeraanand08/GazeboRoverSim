@@ -1,0 +1,50 @@
+[0.000000] (-) TimerEvent: {}
+[0.000480] (waypoint_bot) JobQueued: {'identifier': 'waypoint_bot', 'dependencies': OrderedDict()}
+[0.001890] (waypoint_bot) JobStarted: {'identifier': 'waypoint_bot'}
+[0.127856] (-) TimerEvent: {}
+[0.362279] (-) TimerEvent: {}
+[0.465786] (-) TimerEvent: {}
+[0.566709] (-) TimerEvent: {}
+[0.714199] (-) TimerEvent: {}
+[0.834460] (-) TimerEvent: {}
+[0.935755] (-) TimerEvent: {}
+[1.046626] (-) TimerEvent: {}
+[1.191227] (-) TimerEvent: {}
+[1.294090] (-) TimerEvent: {}
+[1.412191] (-) TimerEvent: {}
+[1.513551] (-) TimerEvent: {}
+[1.614735] (-) TimerEvent: {}
+[1.735593] (-) TimerEvent: {}
+[1.842129] (-) TimerEvent: {}
+[1.943253] (-) TimerEvent: {}
+[2.058074] (-) TimerEvent: {}
+[2.088528] (waypoint_bot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'develop', '--editable', '--build-directory', '/home/vanand1/rover_sim/build/waypoint_bot/build', '--no-deps', 'symlink_data'], 'cwd': '/home/vanand1/rover_sim/build/waypoint_bot', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'USER': 'vanand1', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/vanand1', 'OLDPWD': '/home/vanand1/rover_sim', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '2060', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=c9e866c85d649684552c4aa16aa99b8a', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/vanand1/rover_sim/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'vanand1', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/app.slice/app-gnome\\x2dsession\\x2dmanager.slice/gnome-session-manager@ubuntu.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'vanand1', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/ROS2JazzyUnbuntu:@/tmp/.ICE-unix/2060,unix/ROS2JazzyUnbuntu:/tmp/.ICE-unix/2060', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/a4547367_9c36_4c1f_8913_8e0ac1318158', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.H36KV3', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.104', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/vanand1/rover_sim/install/waypoint_bot:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/vanand1/rover_sim/build/waypoint_bot', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=c9e866c85d649684552c4aa16aa99b8a', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/vanand1/rover_sim/build/waypoint_bot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vanand1/rover_sim/install/waypoint_bot/lib/python3.12/site-packages:/home/vanand1/rover_sim/build/waypoint_bot:/home/vanand1/rover_sim/install/waypoint_bot/lib/python3.12/site-packages:/opt/ros/jazzy/opt/gz_sim_vendor/lib/python:/opt/ros/jazzy/opt/sdformat_vendor/lib/python:/opt/ros/jazzy/opt/gz_transport_vendor/lib/python:/opt/ros/jazzy/opt/gz_msgs_vendor/lib/python:/opt/ros/jazzy/opt/gz_math_vendor/lib/python:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}), 'shell': False}
+[2.158935] (-) TimerEvent: {}
+[2.267747] (-) TimerEvent: {}
+[2.369201] (-) TimerEvent: {}
+[2.475187] (-) TimerEvent: {}
+[2.585966] (-) TimerEvent: {}
+[2.696621] (-) TimerEvent: {}
+[2.774837] (waypoint_bot) StdoutLine: {'line': b'running develop\n'}
+[2.810790] (-) TimerEvent: {}
+[2.928545] (-) TimerEvent: {}
+[3.066924] (-) TimerEvent: {}
+[3.080166] (waypoint_bot) StdoutLine: {'line': b'running egg_info\n'}
+[3.108425] (waypoint_bot) StdoutLine: {'line': b'writing waypoint_bot.egg-info/PKG-INFO\n'}
+[3.112717] (waypoint_bot) StdoutLine: {'line': b'writing dependency_links to waypoint_bot.egg-info/dependency_links.txt\n'}
+[3.113079] (waypoint_bot) StdoutLine: {'line': b'writing entry points to waypoint_bot.egg-info/entry_points.txt\n'}
+[3.113348] (waypoint_bot) StdoutLine: {'line': b'writing requirements to waypoint_bot.egg-info/requires.txt\n'}
+[3.113473] (waypoint_bot) StdoutLine: {'line': b'writing top-level names to waypoint_bot.egg-info/top_level.txt\n'}
+[3.158615] (waypoint_bot) StdoutLine: {'line': b"reading manifest file 'waypoint_bot.egg-info/SOURCES.txt'\n"}
+[3.162122] (waypoint_bot) StdoutLine: {'line': b"writing manifest file 'waypoint_bot.egg-info/SOURCES.txt'\n"}
+[3.170735] (-) TimerEvent: {}
+[3.201137] (waypoint_bot) StdoutLine: {'line': b'running build_ext\n'}
+[3.202279] (waypoint_bot) StdoutLine: {'line': b'Creating /home/vanand1/rover_sim/install/waypoint_bot/lib/python3.12/site-packages/waypoint-bot.egg-link (link to .)\n'}
+[3.202449] (waypoint_bot) StdoutLine: {'line': b'Installing astar_nav_node script to /home/vanand1/rover_sim/install/waypoint_bot/lib/waypoint_bot\n'}
+[3.204839] (waypoint_bot) StdoutLine: {'line': b'\n'}
+[3.205025] (waypoint_bot) StdoutLine: {'line': b'Installed /home/vanand1/rover_sim/build/waypoint_bot\n'}
+[3.205108] (waypoint_bot) StdoutLine: {'line': b'running symlink_data\n'}
+[3.258843] (waypoint_bot) CommandEnded: {'returncode': 0}
+[3.272175] (-) TimerEvent: {}
+[3.284916] (waypoint_bot) JobEnded: {'identifier': 'waypoint_bot', 'rc': 0}
+[3.290372] (-) EventReactorShutdown: {}

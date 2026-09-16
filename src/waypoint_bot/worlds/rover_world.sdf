@@ -1,0 +1,203 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="obstacle_world">
+
+    <!-- small step size so the physics is more accurate, real time factor
+         1.0 means it runs at normal speed (not sped up/slowed down) -->
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <!-- these are just the standard plugins you need for basically any
+         gazebo world to work right (physics, gui stuff, rendering) -->
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"></plugin>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"></plugin>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"></plugin>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- just a light so we can actually see stuff -->
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- flat ground, 40x40 so theres plenty of room -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><plane><normal>0 0 1</normal><size>40 40</size></plane></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><plane><normal>0 0 1</normal><size>40 40</size></plane></geometry>
+          <material><ambient>0.8 0.8 0.8 1</ambient><diffuse>0.8 0.8 0.8 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- our 3 obstacles. these are real, they have collision so the lidar
+         actually bumps into them and the robot has to path around them.
+         positions/sizes here need to line up with the ROCK_LIST list in
+         the python file since thats how we know where to generate
+         waypoints away from -->
+    <model name="stone_1"><static>true</static><link name="link">
+      <collision name="collision"><pose>3.74 0.66 0.7 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>1.4</length></cylinder></geometry></collision>
+      <visual name="visual"><pose>3.74 0.66 0.7 0 0 0</pose><geometry><cylinder><radius>0.6</radius><length>1.4</length></cylinder></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual>
+    </link></model>
+
+    <model name="stone_3"><static>true</static><link name="link">
+      <collision name="collision"><pose>-2.76 3.29 1.05 0 0 0</pose><geometry><cylinder><radius>1.2</radius><length>2.1</length></cylinder></geometry></collision>
+      <visual name="visual"><pose>-2.76 3.29 1.05 0 0 0</pose><geometry><cylinder><radius>1.2</radius><length>2.1</length></cylinder></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual>
+    </link></model>
+
+    <model name="stone_5"><static>true</static><link name="link">
+      <collision name="collision"><pose>-1.37 -3.76 0.75 0 0 0</pose><geometry><cylinder><radius>0.7</radius><length>1.5</length></cylinder></geometry></collision>
+      <visual name="visual"><pose>-1.37 -3.76 0.75 0 0 0</pose><geometry><cylinder><radius>0.7</radius><length>1.5</length></cylinder></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual>
+    </link></model>
+
+    <!-- our rover. its just one rigid chassis link, everything else
+         (legs, wheels, mast) are visual only, just there to make it LOOK
+         like an actual rover. the real "body" of the robot for physics
+         purposes is just the collision box on the chassis.
+
+         note: the wheels dont actually turn or spin, theyre just static
+         decorations. we tried doing real steering joints for the front
+         wheels earlier but it ended up causing a bunch of weird bugs
+         (rover would just spin in circles sometimes) because gazebo's
+         VelocityControl plugin controls the whole body directly anyway,
+         so the wheel joints werent doing anything physically. easier to
+         just leave them as plain visuals and let cmd_vel handle turning -->
+    <model name="waypoint_bot">
+      <pose>0 0 0 0 0 0</pose>
+      <self_collide>false</self_collide>
+
+      <link name="chassis">
+        <gravity>false</gravity>
+        <inertial>
+          <mass>8.0</mass>
+          <inertia>
+            <ixx>0.3</ixx><iyy>0.5</iyy><izz>0.6</izz>
+            <ixy>0</ixy><ixz>0</ixz><iyz>0</iyz>
+          </inertia>
+        </inertial>
+
+        <!-- this box is the actual physical body, everything else below
+             is just visual -->
+        <collision name="collision">
+          <pose>0 0 0.35 0 0 0</pose>
+          <geometry><box><size>0.7 0.6 0.7</size></box></geometry>
+        </collision>
+
+        <visual name="body">
+          <pose>0 0 0.55 0 0 0</pose>
+          <geometry><box><size>0.55 0.45 0.2</size></box></geometry>
+          <material><ambient>0.45 0.45 0.45 1</ambient><diffuse>0.45 0.45 0.45 1</diffuse></material>
+        </visual>
+
+        <!-- 4 little legs holding the body up, just for looks -->
+        <visual name="leg_fl">
+          <pose>0.22 0.2 0.325 0 0 0</pose>
+          <geometry><cylinder><radius>0.04</radius><length>0.25</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+        <visual name="leg_fr">
+          <pose>0.22 -0.2 0.325 0 0 0</pose>
+          <geometry><cylinder><radius>0.04</radius><length>0.25</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+        <visual name="leg_bl">
+          <pose>-0.22 0.2 0.325 0 0 0</pose>
+          <geometry><cylinder><radius>0.04</radius><length>0.25</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+        <visual name="leg_br">
+          <pose>-0.22 -0.2 0.325 0 0 0</pose>
+          <geometry><cylinder><radius>0.04</radius><length>0.25</length></cylinder></geometry>
+          <material><ambient>0.3 0.3 0.3 1</ambient><diffuse>0.3 0.3 0.3 1</diffuse></material>
+        </visual>
+
+        <!-- all 4 wheels, black, just cylinders rotated sideways. these
+             DONT spin or turn, purely decorative -->
+        <visual name="wheel_bl">
+          <pose>-0.22 0.28 0.15 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.15</radius><length>0.1</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+        </visual>
+        <visual name="wheel_br">
+          <pose>-0.22 -0.28 0.15 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.15</radius><length>0.1</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+        </visual>
+        <visual name="wheel_fl">
+          <pose>0.22 0.28 0.15 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.15</radius><length>0.1</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+        </visual>
+        <visual name="wheel_fr">
+          <pose>0.22 -0.28 0.15 1.5708 0 0</pose>
+          <geometry><cylinder><radius>0.15</radius><length>0.1</length></cylinder></geometry>
+          <material><ambient>0.1 0.1 0.1 1</ambient><diffuse>0.1 0.1 0.1 1</diffuse></material>
+        </visual>
+
+        <!-- little pole sticking up so the lidar sensor sits above the
+             body. had to put the lidar up here instead of on the chassis
+             directly because it kept detecting the rover's own body as an
+             obstacle when it was mounted lower -->
+        <visual name="lidar_mast">
+          <pose>0 0 0.775 0 0 0</pose>
+          <geometry><cylinder><radius>0.03</radius><length>0.25</length></cylinder></geometry>
+          <material><ambient>0.2 0.2 0.2 1</ambient><diffuse>0.2 0.2 0.2 1</diffuse></material>
+        </visual>
+
+        <!-- the actual lidar sensor. 360 samples means it can see all the
+             way around (360 degrees), range is 0.1 to 10 meters -->
+        <sensor name="lidar" type="gpu_lidar">
+          <pose>0 0 0.9 0 0 0</pose>
+          <topic>lidar</topic>
+          <update_rate>10</update_rate>
+          <always_on>true</always_on>
+          <visualize>true</visualize>
+          <lidar>
+            <scan>
+              <horizontal>
+                <samples>360</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.14159</min_angle>
+                <max_angle>3.14159</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>10.0</max>
+              <resolution>0.01</resolution>
+            </range>
+          </lidar>
+        </sensor>
+      </link>
+
+      <!-- this is what actually lets us drive the robot. it just takes a
+           Twist message (linear x + angular z) on cmd_vel and moves the
+           whole model with it directly, no wheel physics involved -->
+      <plugin filename="gz-sim-velocity-control-system" name="gz::sim::systems::VelocityControl">
+        <topic>/model/waypoint_bot/cmd_vel</topic>
+      </plugin>
+
+      <!-- publishes the robots position/orientation so our python code
+           knows where it is (basically acts like perfect gps + compass,
+           which obviously wouldnt exist on a real rover) -->
+      <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher">
+        <odom_frame>odom</odom_frame>
+        <robot_base_frame>waypoint_bot</robot_base_frame>
+        <odom_publish_frequency>20</odom_publish_frequency>
+        <odom_topic>/model/waypoint_bot/odometry</odom_topic>
+      </plugin>
+    </model>
+
+  </world>
+</sdf>

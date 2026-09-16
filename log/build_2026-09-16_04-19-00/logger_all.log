@@ -1,0 +1,119 @@
+[0.193s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.193s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=4, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7acdd9110980>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7acdd9231790>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7acdd9231790>>)
+[0.279s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.280s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.280s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.281s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.281s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/vanand1/rover_sim'
+[0.281s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.282s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.343s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.344s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.345s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.346s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.347s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extensions ['ignore', 'ignore_ament_install']
+[0.348s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extension 'ignore'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extension 'ignore_ament_install'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extensions ['colcon_pkg']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extension 'colcon_pkg'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extensions ['colcon_meta']
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extension 'colcon_meta'
+[0.349s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extensions ['ros']
+[0.350s] Level 1:colcon.colcon_core.package_identification:_identify(src/waypoint_bot) by extension 'ros'
+[0.355s] DEBUG:colcon.colcon_core.package_identification:Package 'src/waypoint_bot' with type 'ros.ament_python' and name 'waypoint_bot'
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.355s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.356s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.392s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'cmake_target' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'cmake_clean_cache' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'cmake_clean_first' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'cmake_force_configure' from command line to 'False'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'ament_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'catkin_cmake_args' from command line to 'None'
+[0.393s] Level 5:colcon.colcon_core.verb:set package 'waypoint_bot' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.393s] DEBUG:colcon.colcon_core.verb:Building package 'waypoint_bot' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/vanand1/rover_sim/build/waypoint_bot', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/vanand1/rover_sim/install/waypoint_bot', 'merge_install': False, 'path': '/home/vanand1/rover_sim/src/waypoint_bot', 'symlink_install': True, 'test_result_base': None}
+[0.393s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.396s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.397s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/vanand1/rover_sim/src/waypoint_bot' with build type 'ament_python'
+[0.398s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoint_bot', 'ament_prefix_path')
+[0.409s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.409s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/hook/ament_prefix_path.dsv'
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/hook/ament_prefix_path.sh'
+[0.414s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.879s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/vanand1/rover_sim/src/waypoint_bot'
+[0.880s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.189s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools commands: install, editable_wheel, install_headers, develop, rotate, symlink_data, register, compile_catalog, bdist_egg, install_data, test, easy_install, update_catalog, install_scripts, egg_info, init_catalog, extract_messages, build_scripts, install_lib, build, install_egg_info, setopt, clean, bdist_dumb, build_py, upload_docs, saveopts, bdist, bdist_rpm, build_clib, upload, dist_info, alias, build_ext, sdist, check
+[2.748s] DEBUG:colcon.colcon_core.task.python.build:Available setuptools 'develop' options: --help, --optimize, --user, --allow-hosts, --zip-ok, --version, --upgrade, --local-snapshots-ok, --site-dirs, --find-links, --quiet, --install-layout, --no-user-cfg, --multi-version, --uninstall, --prefix, --record, --install-dir, --always-copy, --no-find-links, --dry-run, --index-url, --script-dir, --editable, --egg-path, --always-unzip, --verbose, --exclude-scripts, --no-deps, --build-directory, --force-installation-into-system-dir
+[2.764s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/vanand1/rover_sim/build/waypoint_bot': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vanand1/rover_sim/build/waypoint_bot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vanand1/rover_sim/install/waypoint_bot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/vanand1/rover_sim/build/waypoint_bot/build --no-deps symlink_data
+[3.890s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoint_bot', 'pythonpath_develop')
+[3.892s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vanand1/rover_sim/build/waypoint_bot/share/waypoint_bot/hook/pythonpath_develop.dsv'
+[3.894s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/vanand1/rover_sim/build/waypoint_bot' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PYTHONPATH=/home/vanand1/rover_sim/build/waypoint_bot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vanand1/rover_sim/install/waypoint_bot/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/vanand1/rover_sim/build/waypoint_bot/build --no-deps symlink_data
+[3.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vanand1/rover_sim/build/waypoint_bot/share/waypoint_bot/hook/pythonpath_develop.sh'
+[3.902s] Level 1:colcon.colcon_core.environment:checking '/home/vanand1/rover_sim/install/waypoint_bot' for CMake module files
+[3.904s] Level 1:colcon.colcon_core.environment:checking '/home/vanand1/rover_sim/install/waypoint_bot' for CMake config files
+[3.906s] Level 1:colcon.colcon_core.environment:checking '/home/vanand1/rover_sim/install/waypoint_bot/lib'
+[3.906s] Level 1:colcon.colcon_core.environment:checking '/home/vanand1/rover_sim/install/waypoint_bot/bin'
+[3.907s] Level 1:colcon.colcon_core.environment:checking '/home/vanand1/rover_sim/install/waypoint_bot/lib/pkgconfig/waypoint_bot.pc'
+[3.908s] Level 1:colcon.colcon_core.environment:checking '/home/vanand1/rover_sim/install/waypoint_bot/lib/python3.12/site-packages'
+[3.908s] Level 1:colcon.colcon_core.shell:create_environment_hook('waypoint_bot', 'pythonpath')
+[3.908s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/hook/pythonpath.dsv'
+[3.910s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/hook/pythonpath.sh'
+[3.912s] Level 1:colcon.colcon_core.environment:checking '/home/vanand1/rover_sim/install/waypoint_bot/bin'
+[3.912s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(waypoint_bot)
+[3.912s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/package.dsv'
+[3.914s] INFO:colcon.colcon_core.shell:Creating package script '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/package.sh'
+[3.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/package.bash'
+[3.918s] INFO:colcon.colcon_core.shell:Creating package script '/home/vanand1/rover_sim/install/waypoint_bot/share/waypoint_bot/package.zsh'
+[3.919s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/vanand1/rover_sim/install/waypoint_bot/share/colcon-core/packages/waypoint_bot)
+[3.920s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.922s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.922s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.922s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.939s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.939s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.939s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.981s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.985s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vanand1/rover_sim/install/local_setup.sh'
+[3.987s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/vanand1/rover_sim/install/_local_setup_util_sh.py'
+[3.991s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vanand1/rover_sim/install/setup.sh'
+[3.994s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vanand1/rover_sim/install/local_setup.bash'
+[3.997s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vanand1/rover_sim/install/setup.bash'
+[4.001s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/vanand1/rover_sim/install/local_setup.zsh'
+[4.002s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/vanand1/rover_sim/install/setup.zsh'
